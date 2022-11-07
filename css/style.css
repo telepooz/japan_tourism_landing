@@ -97,6 +97,75 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-top: 263px;
+
+}
+
+.intro__title{
+    max-width: 619px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+.intro__subtitle{
+    max-width: 546px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 59px;
+}
+
+.search__form {
+
+}
+.search__form-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+.search__form-field {
+    background-color: transparent;
+    background: url(../img/krug.svg) no-repeat left 6px;
+    background-size: 20px;
+    border:0;
+    border-bottom: 3px solid #BFC0C5;
+    margin-right: 60px;
+    padding-bottom: 22px;
+    padding-left: 44px;
+    width: 297px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+
+}
+
+.search__form-field::placeholder{
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+
+}
+.search__form-submit {
+    background-color: #1B7DFF;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border-radius: 50px;
+    border: 0;
+    
+
+}
+
+.search__form-submit:hover,
+.search__form-submit:active,
+.search__form-submit:target{
+    background-color: #02295d;
+    color: #b6a1a1;
 
 }
 
