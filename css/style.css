@@ -99,6 +99,13 @@ img {
     top: 0;
     left: 0;
     width: 100%;
+    transition: .2s linear;
+    padding-bottom: 20px;
+    z-index: 5;
+}
+
+.header_active{
+    background: #0E1D28;;
 }
 
 .header__wrapper {
@@ -106,7 +113,7 @@ img {
     flex-wrap: wrap;
     align-items: end;
     justify-content: space-between;
-    padding-top: 56px;
+    padding-top: 30px;
 }
 
 .header__list {
@@ -163,7 +170,7 @@ img {
     margin-bottom: 59px;
 }
 
-.search__form {}
+
 
 .search__form-info {
     display: flex;
@@ -316,7 +323,7 @@ img {
     margin-right: 15px;
 }
 
-.wrapper-full {}
+
 
 .places__view-all {
     font-size: 16px;
@@ -395,8 +402,7 @@ img {
 }
 
 
-.tour {
-}
+
 .tours {
     margin-bottom: 139px;
 }
@@ -409,10 +415,7 @@ img {
     align-items: center;
     margin-bottom: 77px;
 }
-.tour__pic {
-}
-.tour__img {
-}
+
 .tour__info {
     padding-left: 42px;
 }
@@ -464,8 +467,7 @@ img {
     position: relative;
     margin-bottom: 45px;
 }
-.top__card-img {
-}
+
 .top__card-stats {
     position: absolute;
     bottom: 0;
@@ -484,8 +486,7 @@ img {
     color: #fff;
     margin: 0 auto 0 0;
 }
-.top__card-like {
-}
+
 .top__card-likes {
     font-weight: 500;
     font-size: 16px;
@@ -495,8 +496,7 @@ img {
     background: url(../img/heart.svg) no-repeat right;
     margin-right: 14px;
 }
-.top__card-comment {
-}
+
 .top__card-comments {
     font-weight: 500;
     font-size: 16px;
@@ -527,6 +527,72 @@ img {
 .top__card-more:hover{
     background-color: #02295d;
     color: #b6a1a1;
+}
+
+.videos{
+    width: 100%;
+}
+
+.videos__wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.video__item{
+    padding-top: 56.25%;
+}
+
+.video__element{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+
+.footer{
+    background: #0E1D28;
+    padding: 119px 0;
+}
+
+.footer__item{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__logo{
+    width: 50%;
+}
+
+.footer__nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer__menu-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.footer__menu-link{
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    transition: all .3s;
+
+}
+
+.footer__menu-link:hover{
+    opacity: .75;
 }
 
 
