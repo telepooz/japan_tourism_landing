@@ -782,6 +782,9 @@ img {
         -ms-grid-column-span: 6;
         grid-column: span 6;
         margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .intro{
@@ -825,6 +828,7 @@ img {
 
     .benefits__card-descr{
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .places{
@@ -865,6 +869,8 @@ img {
 
     .top__card{
         grid-column: span 6;
+        display: flex;
+        align-items: center;
     }
 
     .top__card-stats{
@@ -873,6 +879,7 @@ img {
 
     .top__card-desc{
         margin-bottom: 15px;
+        text-align: center;
     }
 
     .footer__logo{
