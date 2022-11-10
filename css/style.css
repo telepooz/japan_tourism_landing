@@ -65,11 +65,13 @@ img {
 .wrapper {
     max-width: 1060px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .wrapper-full {
     max-width: 1262px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .section__title {
@@ -109,6 +111,7 @@ img {
 }
 
 .header__wrapper {
+
     display: flex;
     flex-wrap: wrap;
     align-items: end;
@@ -139,6 +142,33 @@ img {
 .header__link:active {
     opacity: .75;
 
+}
+
+.header__burger{
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+}
+
+.burger__line{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+}
+
+.burger__line_first {
+    top: 0;
+}
+.burger__line_second {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.burger__line_thirs {
+    bottom: 0;
 }
 
 
@@ -180,7 +210,7 @@ img {
 
 .search__form-field {
     background-color: transparent;
-    background: url(../img/krug.svg) no-repeat left 6px;
+    background: url(../img/krug.svg) no-repeat left 2px;
     background-size: 20px;
     border: 0;
     border-bottom: 3px solid #BFC0C5;
@@ -382,12 +412,12 @@ img {
 
 .places__card-pic-lgg {
     object-fit: cover;
-    height: 354px;
+    height: 100%;
 }
 
 .places__card-pic-smm {
     object-fit: cover;
-    height: 283px;
+    height: 100%;
 }
 
 .places__card-title {
@@ -456,12 +486,13 @@ img {
 
 .top__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 57px;
 }
 .top__card {
     display: flex;
     flex-direction: column;
+    grid-column: span 2;
 }
 .top__card-pic {
     position: relative;
@@ -593,6 +624,278 @@ img {
 
 .footer__menu-link:hover{
     opacity: .75;
+}
+/* start Media */
+
+@media screen and (max-width: 960px){
+    .benefits{
+        margin-bottom: 75px;
+    }
+
+    .benefits__card{
+        margin-bottom: 60px;
+    }
+
+   
+    .places__card-size-lg{
+        grid-column: span 6;
+    }
+
+    .places__card-size-sm{
+        grid-column: span 6; 
+    }
+
+    .search__form-field{
+        margin-bottom: 25px;
+    }
+
+    .benefits__cards{
+        padding: 0 15px;
+        grid-column-gap:35px;
+    }
+
+    .benefits__title{
+        padding: 55px 15px;
+    }
+
+    .benefits__wrapper{
+        box-shadow: none;
+    }
+
+    .tours__tour{
+        grid-column-gap: 35px;
+    }
+
+    .tour__info{
+        padding-left: 0;
+    }
+
+    .tour__title{
+        margin-bottom: 15px;
+    }
+
+    .tour__descr{
+        margin-bottom: 15px;
+    }
+
+    .top__cards{
+        grid-column-gap: 25px;
+        grid-row-gap: 55px;
+    }
+
+    .top__card{
+        grid-column: span 3;
+    }
+
+    .top__card-pic{
+        margin-bottom: 25px;
+    }
+
+    .footer{
+        padding: 60px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .section__title{
+        margin-bottom: 25px;
+    }
+
+    .section__title::after {
+        width: 78px;
+    
+    }
+    .header__burger{
+        display: block;
+    }
+
+    .header__wrapper{
+        padding-top: 28px;
+    }
+
+    .header__nav{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        z-index: 10;
+        padding: 75px;
+        transform: translateX(100%);
+    }
+
+    .header__nav_active{
+        transform: translateX(0);
+        transition: .2s all linear;
+    }
+
+    .header__item{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .header__item:last-child{
+        margin-bottom: 0;
+    }
+    .header__item + .header__item{
+        margin-left: 0;
+    }
+
+    .header__link{
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .header__nav-close{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+        
+
+    }
+
+    .header__nav-close-line{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50px;
+      
+    }
+
+    .header__nav-close-line:first-child{
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .header__nav-close-line:last-child{
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .benefits__card{
+        -ms-grid-column-span: 6;
+        grid-column: span 6;
+        margin-bottom: 40px;
+    }
+
+    .intro{
+        padding-top: 100px;
+    }
+    
+    .intro__title{
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .intro__subtitle{
+        font-size: 14px;
+    }
+    .search__form-field{
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 12px;
+    }
+
+    .search__form-field::placeholder{
+        font-size: 16px;
+         
+    }
+
+    .search__form-submit{
+        width: 100%;
+    }
+
+    .benefits{
+        margin-bottom: 36px;
+    }
+
+    .benefits__card-pic{
+        margin-bottom: 20px;
+    }
+
+    .benefits__card-title{
+        margin-bottom: 12px;
+    }
+
+    .benefits__card-descr{
+        margin-bottom: 20px;
+    }
+
+    .places{
+        margin-bottom: 76px;
+    }
+    .places__cards{
+            grid-row-gap: 10px;
+    }
+
+    .places__card-size-lg, .places__card-size-sm {
+        height: 230px;
+       
+    }
+
+    .tours{
+        margin-bottom: 76px;
+    }
+
+    .tour__pic{
+        margin-bottom: 12px;
+    }
+
+    .tour__pic, .tour__info {
+        grid-column: span 2;
+    }
+
+    .tour__pic_mob-first{
+        grid-row-start: -1;
+    }
+
+    .tours__tour{
+        margin-bottom: 50px;
+    }
+
+    .top{
+        margin-bottom: 76px;
+    }
+
+    .top__card{
+        grid-column: span 6;
+    }
+
+    .top__card-stats{
+        max-width: 386px;
+    }
+
+    .top__card-desc{
+        margin-bottom: 15px;
+    }
+
+    .footer__logo{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .footer__nav{
+        width: 100%;
+    }
+
+    .footer__menu{
+        width: 50%;
+        margin-bottom:24px;
+    }
+    
+}
+@media screen and (max-width: 500px){
+    .header__nav{
+        padding: 75px 30px;
+    }
+
+    
 }
 
 
